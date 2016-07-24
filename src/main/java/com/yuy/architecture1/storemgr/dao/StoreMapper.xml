@@ -14,6 +14,9 @@
      	delete from tbl_store where uuid=#{uuid}
      </delete>
      
+     <select id="getByGoodsUuid" parameterType="int" resultType="StoreM">
+     	select * from tbl_store where goodsUuid = #{goodsUuid}
+     </select>
     <select id="getByUuid" parameterType="int" resultType="StoreM">  
         select * from tbl_store where uuid=#{uuid}
     </select>  
